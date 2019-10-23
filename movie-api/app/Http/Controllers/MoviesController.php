@@ -23,4 +23,12 @@ class MoviesController extends Controller
 
         return $response->getBody();
     }
+
+    public function getGenres()
+    {
+        $client = new Client(['base_uri' => 'https://api.themoviedb.org/3/genre/movie/list?api_key=1f54bd990f1cdfb230adb312546d765d', 'timeout'  => 2.0]);
+        $response = $client->request('GET', '');
+
+        return $response->getBody();
+    }
 }

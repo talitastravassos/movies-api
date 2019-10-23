@@ -21,3 +21,6 @@ Route::get('/movies', 'MoviesController@getUpComing');
 
 Route::get('/search/{query}', 'MoviesController@search');
 
+Route::get('/genres', 'MoviesController@getGenres');
+
+
