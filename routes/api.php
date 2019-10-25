@@ -18,10 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/movies/{page?}', 'MoviesController@getUpComing');
-Route::get('/movies/{movie_id}', 'MoviesController@getMovie');
-
+Route::get('/movie/{movie_id}', 'MoviesController@getMovie');
 Route::get('/search/{query}/{page?}', 'MoviesController@search');
-
 Route::get('/genres', 'MoviesController@getGenres');
 
 
