@@ -21,6 +21,17 @@ class MoviesController extends Controller{
         return $response->getBody();
     }
 
+    public function getMovie($movie_id)
+    {
+
+        $client = new Client([
+            'base_uri' => $this->BASE_URL.'movie/'.$movie_id.'?api_key='.$this->API_KEY,
+            'timeout'  => 2.0]);
+        $response = $client->request('GET', '');
+
+        return $response->getBody();
+    }
+
     public function search($query)
     {
         $client = new Client([
