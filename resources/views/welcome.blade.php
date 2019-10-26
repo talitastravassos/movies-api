@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Movies API</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -18,37 +18,19 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                overflow: hidden;
             }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
+            .container{
+                margin: 10px 20px 0px 20px;
             }
 
             .title {
-                font-size: 84px;
+                font-size: 4rem;
+                text-align: center;
             }
 
-            .links > a {
+            a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
@@ -58,43 +40,54 @@
                 text-transform: uppercase;
             }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <div class="container">
+            <h1 class="title">Movies API</h1>
+            <section>
+                <h2>Endpoints</h2>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>Get a list of upcoming movies</strong><br>
+                            <i>page param is a optional param</i><br>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+                           <code> https://pacific-atoll-01908.herokuapp.com/api/movies/{page?}</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Get details of a movie by id</strong><br>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                            <code>https://pacific-atoll-01908.herokuapp.com/api/movie/{movie_id}</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Search for movies by query</strong><br>
+                            <i>page param is a optional param</i><br>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+                            <code>https://pacific-atoll-01908.herokuapp.com/api/search/{query}/{page?}</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Get a list of genres</strong><br>
+
+                            <code>https://pacific-atoll-01908.herokuapp.com/api/genres</code>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Source code</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/talitastravassos/movies-api">Github</a>
+                    </li>
+                </ul>
+            </section>
         </div>
     </body>
 </html>
