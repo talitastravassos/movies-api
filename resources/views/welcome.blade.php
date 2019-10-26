@@ -16,13 +16,10 @@
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100vh;
-                margin: 0;
-                overflow: hidden;
             }
 
             .container{
-                margin: 10px 20px 0px 20px;
+                margin: 10px 20px 10px 20px;
             }
 
             .title {
