@@ -48,7 +48,7 @@
                     <li>
                         <p>
                             <strong>Get a list of upcoming movies</strong><br>
-                            <i>page param is a optional param</i><br>
+                            <i>page param is optional</i><br>
 
                            <code> https://pacific-atoll-01908.herokuapp.com/api/movies/{page?}</code>
                         </p>
@@ -63,7 +63,7 @@
                     <li>
                         <p>
                             <strong>Search for movies by query</strong><br>
-                            <i>page param is a optional param</i><br>
+                            <i>page param is optional</i><br>
 
                             <code>https://pacific-atoll-01908.herokuapp.com/api/search/{query}/{page?}</code>
                         </p>

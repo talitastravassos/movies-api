@@ -4,7 +4,7 @@
 
 ## Endpoints
 - Get a list of upcoming movies  
-*page param is a optional param*  
+*page param is optional*  
 
     `https://pacific-atoll-01908.herokuapp.com/api/movies/{page?}`
 
@@ -13,7 +13,7 @@
     `https://pacific-atoll-01908.herokuapp.com/api/movie/{movie_id}`
     
 - Search for movies by query  
-*page param is a optional param*  
+*page param is optional*  
 
     `https://pacific-atoll-01908.herokuapp.com/api/search/{query}/{page?}`
     
